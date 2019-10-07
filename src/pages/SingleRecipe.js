@@ -22,7 +22,7 @@ export default class SingleRecipe extends Component {
     try {
       const response = await fetch(url);
       const responseData = await response.json();
-      console.log("cac", responseData);
+      //console.log("cac", responseData);
       this.setState({
         recipe: responseData.recipe,
         loading: false
