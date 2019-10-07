@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Search from "../components/Search";
 import RecipeList from "../components/RecipeList";
 
-import { recipeData } from "../data/tempList";
+//import { recipeData } from "../data/tempList";
 
 export default class Recipes extends Component {
   constructor(props) {
@@ -12,10 +12,10 @@ export default class Recipes extends Component {
   }
 
   state = {
-    recipes: recipeData,
+    recipes: [],
     search: "",
-    url: `https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
-    base_url: `https://www.food2fork.com/api/search?key=${process.env.REACT_APP_API_KEY}`,
+    url: `https://www.food2fork.com/api/search?key=43e018b646f7de4f8391ab61c87decf5`,
+    base_url: `https://www.food2fork.com/api/search?key=43e018b646f7de4f8391ab61c87decf5`,
     query: "&q=",
     error: ""
   };

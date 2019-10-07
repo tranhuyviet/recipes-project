@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { recipeData } from "../data/tempDetails";
+//import { recipeData } from "../data/tempDetails";
 import { Link } from "react-router-dom";
 
 export default class SingleRecipe extends Component {
@@ -18,7 +18,7 @@ export default class SingleRecipe extends Component {
   }
 
   async componentDidMount() {
-    const url = `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`;
+    const url = `https://www.food2fork.com/api/get?key=43e018b646f7de4f8391ab61c87decf5&rId=${this.state.id}`;
     try {
       const response = await fetch(url);
       const responseData = await response.json();
@@ -68,7 +68,7 @@ export default class SingleRecipe extends Component {
             </Link>
             <img
               src={image_url}
-              alt="image"
+              alt="recipe"
               className="d-block w-100"
               style={{ maxHeight: "30rem" }}
             />
